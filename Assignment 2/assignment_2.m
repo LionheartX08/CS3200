@@ -106,8 +106,23 @@
 % varies with the different choice of 6,11,21,41,81,161,321 and 641 points, 
 % both Chebyshev and evenly spaced. 
 
+%even spaced Lagrange Polynomial Interpolation
+for i = 1:8
+    n = 1+5*(2^(i-1));
+    x = evenspace(n);
+    y = exp(x);
+    u = evenspace(1001);
+    rplot = exp(u);
+    pplot = polyinterp(x,y,u);
+    %error calc
+    sqrth = 1.0/sqrt(n);
+    errinf = norm((yplot-expplot),inf);
+    fprintf('n=%i, infinity error = %8.2e\n', n ,errinf);
+end
+plot(u,rplot)
+plot(u,pplot)
 
-
+%Chebyshev spaced Langrange Polynomial Interpolation
 
 %part 1 functions
 function v = evenspace(n)
