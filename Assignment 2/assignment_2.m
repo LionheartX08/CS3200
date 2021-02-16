@@ -107,6 +107,7 @@
 % both Chebyshev and evenly spaced. 
 
 %even spaced Lagrange Polynomial Interpolation
+%TODO
 for i = 1:8
     n = 1+5*(2^(i-1));
     x = evenspace(n);
