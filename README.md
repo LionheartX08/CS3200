@@ -3,3 +3,4 @@
 Homework assignments for Scientific Computing course  
 1 - Matlab Intro  
 2 - Polynomial Interpolation  
+3 - Linear Equations and Condition Numbers  
